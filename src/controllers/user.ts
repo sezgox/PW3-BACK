@@ -21,8 +21,9 @@ export const register = async (req: Request, res: Response) => {
             password: hashedPassword
         });
         res.json({
-            msg: "Usuario creado :)",
-        });
+            msg: "User registered"
+        })
+        console.log('User created' + username + password)
     } catch (error) {
         res.status(400).json({
             msg: "No se pudo crear el usuario :(",

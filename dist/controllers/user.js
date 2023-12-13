@@ -31,8 +31,9 @@ const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             password: hashedPassword
         });
         res.json({
-            msg: "Usuario creado :)",
+            msg: "User registered"
         });
+        console.log('User created' + username + password);
     }
     catch (error) {
         res.status(400).json({
